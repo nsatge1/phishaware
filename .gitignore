@@ -83,9 +83,9 @@ ios/build
 .env
 
 # Configuration & Cache
-.eslintcache
+.eslintcache.js
 .watchmanconfig
-.prettierrc
+.prettierrc.js
 babel.config.js
 metro.config.js
 jest.config.js
