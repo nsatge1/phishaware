@@ -1,97 +1,114 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🛡️ PhishAware
 
-# Getting Started
+PhishAware est une application mobile d'apprentissage interactif permettant de sensibiliser les utilisateurs aux attaques de phishing. Elle propose des quiz, des exercices pratiques et des actualités sur les dernières menaces en ligne.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 📌 Fonctionnalités
+- 🎯 **Détection de phishing** : Quiz interactifs pour apprendre à repérer les tentatives de phishing.
+- 📰 **Actualités** : Flux d'actualités sur les nouvelles menaces de phishing.
+- 📍 **Localisation des événements** : Permet aux utilisateurs de publier et rejoindre des événements liés à la cybersécurité.
+- 📱 **Compatible iOS & Android** : Développé avec React Native.
 
-## Step 1: Start Metro
+---
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 🚀 Installation & Configuration
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### 1️⃣ Prérequis
+- [Node.js](https://nodejs.org/) et [npm](https://www.npmjs.com/)
+- [React Native CLI](https://reactnative.dev/docs/environment-setup)
+- [Android Studio](https://developer.android.com/studio) et SDK Android (pour Android)
 
-```sh
-# Using npm
-npm start
+### 2️⃣ Installation du projet
+Clone ce dépôt et installe les dépendances :
+```bash
+# Cloner le projet
+git clone https://github.com/ton-github/phishaware.git
+cd phishaware
 
-# OR using Yarn
-yarn start
+# Installer les dépendances
+npm install
 ```
 
-## Step 2: Build and run your app
+### 3️⃣ Exécuter l'application
+#### Android
+```bash
+npx react-native run-android
+```
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+## 📁 Structure du projet
+```
+phishaware/
+├── android/        # Projet Android
+├── ios/            # Projet iOS
+├── src/            # Code source de l'application
+│   ├── components/ # Composants réutilisables
+│   ├── screens/    # Écrans principaux
+│   ├── services/   # Services API & utilitaires
+├── App.tsx         # Point d'entrée de l'application
+├── package.json    # Dépendances et scripts
+├── README.md       # Documentation du projet
 ```
 
-### iOS
+---
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+## 🛠 Gestion du Dépôt Git
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+Nous utilisons GitHub Issues pour suivre les nouvelles fonctionnalités et les bugs.
 
-```sh
-bundle install
+#### 📌 Branches principales :
+- main → Version stable du projet.
+- develop → Version en cours de développement.
+- feature/nom_de_la_fonctionnalité → Pour les nouvelles fonctionnalités.
+- fix/nom_du_bug → Pour les corrections de bugs.
+- hotfix/nom_du_hotfix → Pour les corrections urgentes en production.
+
+#### 📌 Workflow de développement :
+
+### 1️⃣ Créer une branche pour une nouvelle fonctionnalité :
+
+Avant de commencer, crée une issue sur GitHub, puis crée une branche correspondante.
+
+```bash
+git checkout develop  # Toujours partir de develop
+git pull origin develop  # Mettre à jour develop
+git checkout -b feature/nom_de_la_fonctionnalité
 ```
 
-Then, and every time you update your native dependencies, run:
+### 2️⃣ Ajouter des modifications et commit :
 
-```sh
-bundle exec pod install
+```bash
+git add .
+git commit -m "Ajout de [Nom de la fonctionnalité]"
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
 
-```sh
-# Using npm
-npm run ios
+### 3️⃣ Mettre à jour la branche avant de fusionner :
 
-# OR using Yarn
-yarn ios
+```bash
+git checkout develop
+git pull origin develop
+git checkout feature/nom_de_la_fonctionnalité
+git merge develop
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+### 4️⃣ Pousser la branche et créer une Pull Request :
+```bash
+git push origin feature/nom_de_la_fonctionnalité
+```
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+#### 📌 Ensuite, ouvre une Pull Request (PR) sur GitHub pour fusionner dans develop.
 
-## Step 3: Modify your app
+### 5️⃣ Fusionner la fonctionnalité dans develop après validation :
 
-Now that you have successfully run the app, let's make changes!
+```bash
+git checkout develop
+git merge feature/nom_de_la_fonctionnalité
+git push origin develop
+```
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+### 🔥 Ne pas oublier de supprimer la branche après fusion :
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+```bash
+git branch -d feature/nom_de_la_fonctionnalité
+git push origin --delete feature/nom_de_la_fonctionnalité
+```
