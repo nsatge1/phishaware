@@ -5,6 +5,7 @@ import { API_KEY_NEWS } from '@env';
 import ScreenLayout from '../components/ScreenLayout';
 
 const NewsScreen = () => {
+  API_KEY_NEWS
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
 

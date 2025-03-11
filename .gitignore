@@ -84,8 +84,6 @@ ios/build
 .eslintrc.js
 .watchmanconfig
 .prettierrc.js
-babel.config.js
-metro.config.js
 jest.config.js
 Gemfile.lock
 Gemfile

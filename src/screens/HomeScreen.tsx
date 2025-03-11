@@ -9,6 +9,7 @@ import { API_KEY_NEWS } from '@env';
 
 
 const HomeScreen = () => {
+  API_KEY_NEWS
   const navigation = useNavigation();
   const [lastScore, setLastScore] = useState<number | null>(null);
   const [latestNews, setLatestNews] = useState(null);
